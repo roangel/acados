@@ -177,6 +177,7 @@ ocp_nlp_config *ocp_nlp_config_create(ocp_nlp_plan plan)
 
     acados_size_t bytes = ocp_nlp_config_calculate_size(N);
     void *config_mem = acados_calloc(1, bytes);
+    printf("acados_calloc pointer %p", config_mem);
     assert(config_mem != 0);
     ocp_nlp_config *config = ocp_nlp_config_assign(N, config_mem);
 
